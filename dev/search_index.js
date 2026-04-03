@@ -1,0 +1,3 @@
+var documenterSearchIndex = {"docs":
+[{"category":"section","location":"95-reference/#reference","page":"Reference","text":"","title":"Reference"},{"category":"section","location":"95-reference/#Contents","page":"Reference","text":"Pages = [\"95-reference.md\"]","title":"Contents"},{"category":"section","location":"95-reference/#Index","page":"Reference","text":"Pages = [\"95-reference.md\"]","title":"Index"},{"category":"method","location":"95-reference/#CalcEng.hello_world-Tuple{}","page":"Reference","text":"hi = hello_world()\n\nA simple function to return \"Hello, World!\"\n\n\n\n\n\n","title":"CalcEng.hello_world"},{"category":"section","location":"#CalcEng","page":"CalcEng","text":"Documentation for CalcEng.","title":"CalcEng"}]
+}
