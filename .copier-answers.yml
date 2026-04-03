@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier
+Authors: mcclellanio <mcclellanio@fastmail.com>
+JuliaMinVersion: '1.12'
+License: MIT
+LicenseCopyrightHolders: mcclellanio
+PackageName: CalcEng
+PackageOwner: mcclellaio
+PackageUUID: dcd23967-4eb2-55ef-9f6b-5e75b23edd67
+StrategyConfirmIncluded: false
+StrategyLevel: 1
+StrategyReviewExcluded: true
+_src_path: /Users/mcclellm/.julia/packages/BestieTemplate/fOzc4
