@@ -5,11 +5,11 @@ DocMeta.setdocmeta!(CalcEng, :DocTestSetup, :(using CalcEng); recursive = true)
 
 # Add titles of sections and overrides page titles
 const titles = Dict(
-    # "10-tutorials" => "Tutorials", # example folder title
+# "10-tutorials" => "Tutorials", # example folder title
     "91-developer.md" => "Developer docs",
 )
 
-function recursively_list_pages(folder; path_prefix="")
+function recursively_list_pages(folder; path_prefix = "")
     pages_list = Any[]
     for file in readdir(folder)
         if file == "index.md"
@@ -23,15 +23,15 @@ function recursively_list_pages(folder; path_prefix="")
 
         if isdir(fullpath)
             # If this is a folder, enter the recursion case
-            subsection = recursively_list_pages(fullpath; path_prefix=relpath)
+            subsection = recursively_list_pages(fullpath; path_prefix = relpath)
 
             # Ignore empty folders
             if length(subsection) > 0
                 title = if haskey(titles, relpath)
-                titles[relpath]
+                    titles[relpath]
                 else
-                @error "Bad usage: '$relpath' does not have a title set. Fix in 'docs/make.jl'"
-                relpath
+                    @error "Bad usage: '$relpath' does not have a title set. Fix in 'docs/make.jl'"
+                    relpath
                 end
                 push!(pages_list, title => subsection)
             end
@@ -61,10 +61,10 @@ end
 makedocs(;
     modules = [CalcEng],
     authors = "mcclellanio <mcclellanio@fastmail.com>",
-    repo = "https://github.com/mcclellaio/CalcEng.jl/blob/{commit}{path}#{line}",
+    repo = "https://github.com/mcclellanio/CalcEng.jl/blob/{commit}{path}#{line}",
     sitename = "CalcEng.jl",
-    format = Documenter.HTML(; canonical = "https://mcclellaio.github.io/CalcEng.jl"),
-    pages = list_pages(),
+    format = Documenter.HTML(; canonical = "https://mcclellanio.github.io/CalcEng.jl"),
+    pages = list_pages()
 )
 
-deploydocs(; repo = "github.com/mcclellaio/CalcEng.jl")
+deploydocs(; repo = "github.com/mcclellanio/CalcEng.jl")

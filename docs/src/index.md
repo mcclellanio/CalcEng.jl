@@ -4,5 +4,5 @@ CurrentModule = CalcEng
 
 # CalcEng
 
-Documentation for [CalcEng](https://github.com/mcclellaio/CalcEng.jl).
+Documentation for [CalcEng](https://github.com/mcclellanio/CalcEng.jl).
 
