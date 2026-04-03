@@ -1,5 +1,6 @@
 using CalcEng
 using Documenter
+using DocumenterVitepress
 
 DocMeta.setdocmeta!(CalcEng, :DocTestSetup, :(using CalcEng); recursive = true)
 
@@ -63,8 +64,18 @@ makedocs(;
     authors = "mcclellanio <mcclellanio@fastmail.com>",
     repo = "https://github.com/mcclellanio/CalcEng.jl/blob/{commit}{path}#{line}",
     sitename = "CalcEng.jl",
-    format = Documenter.HTML(; canonical = "https://mcclellanio.github.io/CalcEng.jl"),
+    format = DocumenterVitepress.MarkdownVitepress(
+        repo = "github.com/mcclellanio/CalcEng.jl",
+        devbranch = "main",
+        devurl = "dev"
+    ),
     pages = list_pages()
 )
 
-deploydocs(; repo = "github.com/mcclellanio/CalcEng.jl")
+DocumenterVitepress.deploydocs(;
+    repo = "github.com/mcclellanio/CalcEng.jl",
+    target = joinpath(@__DIR__, "build"),
+    branch = "gh-pages",
+    devbranch = "main",
+    push_preview = true
+)
