@@ -9,3 +9,4 @@ CalcEng = {path = ".."}
 
 [compat]
 Documenter = "1"
+DocumenterVitepress = "0.3.5"
